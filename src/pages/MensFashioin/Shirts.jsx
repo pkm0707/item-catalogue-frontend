@@ -1,7 +1,7 @@
-export function Items(){
+export function Shirts(){
     return(
         <div>
-            
+            Shirts
         </div>
     )
 }

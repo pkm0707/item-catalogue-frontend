@@ -1,7 +1,7 @@
-export function Contact(){
+export function Carrers(){
     return(
         <div>
-            
+            careers
         </div>
     )
 }

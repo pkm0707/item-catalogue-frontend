@@ -1,7 +1,7 @@
-export function Chart(){
-    return(
-        <div>
-            
-        </div>
-    )
+export function Chart() {
+  return (
+    <div>
+        Charts
+    </div>
+  );
 }
