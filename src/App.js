@@ -28,7 +28,6 @@ import { FcBusinesswoman } from "react-icons/fc";
 import { IoShirtSharp } from "react-icons/io5";
 import { GiShirt } from "react-icons/gi";
 import { PiPantsBold } from "react-icons/pi";
-import { TbMoodKid } from "react-icons/tb";
 import { PiPantsFill } from "react-icons/pi";
 import { GiUnderwearShorts } from "react-icons/gi";
 import { GiUnderwear } from "react-icons/gi";
@@ -38,6 +37,7 @@ import { MdContactPage } from "react-icons/md";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { FcAbout } from "react-icons/fc";
 import { ImOffice } from "react-icons/im";
+import { FaBaby } from "react-icons/fa6";
 import { Button } from "@mui/material";
 import { Home } from "./pages/Home";
 import { useNavigate } from "react-router-dom";
@@ -57,7 +57,6 @@ import { AccessoriesWomen } from "./pages/WomensFashion/AccessoriesWomen";
 import { AccessoriesKids } from "./pages/KidsFashion/AccessoriesKids";
 import { PantsKids } from "./pages/KidsFashion/PantsKids";
 import { ShirtsKids } from "./pages/KidsFashion/ShirtsKids";
-
 
 const drawerWidth = 240;
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -216,19 +215,34 @@ export default function PersistentDrawerLeft() {
             </ListItemButton>
             <Collapse in={aboutclick} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate("/company")}}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => {
+                    navigate("/company");
+                  }}
+                >
                   <ListItemIcon>
                     <ImOffice size={20} color="#00FFFF" />
                   </ListItemIcon>
                   <ListItemText primary="Company" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate("/carrers")}}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => {
+                    navigate("/carrers");
+                  }}
+                >
                   <ListItemIcon>
                     <BsPersonWorkspace size={20} color="#A64D79" />
                   </ListItemIcon>
                   <ListItemText primary="Carrers" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>{navigate("/contact")}}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => {
+                    navigate("/contact");
+                  }}
+                >
                   <ListItemIcon>
                     <MdContactPage size={20} color="#7FFF00" />
                   </ListItemIcon>
@@ -252,31 +266,46 @@ export default function PersistentDrawerLeft() {
             </ListItemButton>
             <Collapse in={menclick} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/shirts")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/shirts")}
+                >
                   <ListItemIcon>
                     <IoShirtSharp size={20} color="red" />
                   </ListItemIcon>
                   <ListItemText primary="Shirts" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/pants")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/pants")}
+                >
                   <ListItemIcon>
                     <PiPantsBold size={20} color="blue" />
                   </ListItemIcon>
                   <ListItemText primary="Pants" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/trousers")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/trousers")}
+                >
                   <ListItemIcon>
                     <GiUnderwearShorts size={20} color="green" />
                   </ListItemIcon>
                   <ListItemText primary="Trousers" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/innerwears")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/innerwears")}
+                >
                   <ListItemIcon>
                     <GiUnderwear size={20} color="purple" />
                   </ListItemIcon>
                   <ListItemText primary="Innerwears" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/accessories-men")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/accessories-men")}
+                >
                   <ListItemIcon>
                     <IoIosBriefcase size={20} color="DodgerBlue" />
                   </ListItemIcon>
@@ -300,19 +329,28 @@ export default function PersistentDrawerLeft() {
             </ListItemButton>
             <Collapse in={womenclick} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/tops")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/tops")}
+                >
                   <ListItemIcon>
                     <GiShirt size={20} color="orange" />
                   </ListItemIcon>
                   <ListItemText primary="Tops" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/bottoms")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/bottoms")}
+                >
                   <ListItemIcon>
                     <PiPantsFill size={20} color="blue" />
                   </ListItemIcon>
                   <ListItemText primary="Bottoms" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/accessories-women")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/accessories-women")}
+                >
                   <ListItemIcon>
                     <BsFillSuitcase2Fill size={20} color="orangered" />
                   </ListItemIcon>
@@ -329,26 +367,35 @@ export default function PersistentDrawerLeft() {
           >
             <ListItemButton onClick={handleClickKids}>
               <ListItemIcon>
-                <TbMoodKid size={30} color="blue" />
+                <FaBaby size={30} color="lightblue" />
               </ListItemIcon>
               <ListItemText primary="K-Fashion" />
               {kidsclick ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={kidsclick} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/shirts-kids")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/shirts-kids")}
+                >
                   <ListItemIcon>
                     <GiShirt size={20} color="#008B8B" />
                   </ListItemIcon>
                   <ListItemText primary="Shirts" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/pants-kids")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/pants-kids")}
+                >
                   <ListItemIcon>
                     <PiPantsFill size={20} color="#000080" />
                   </ListItemIcon>
                   <ListItemText primary="Pants" />
                 </ListItemButton>
-                <ListItemButton sx={{ pl: 4 }} onClick={()=>navigate("/accessories-kids")}>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => navigate("/accessories-kids")}
+                >
                   <ListItemIcon>
                     <BsFillSuitcase2Fill size={20} color="#C71585" />
                   </ListItemIcon>
@@ -356,13 +403,6 @@ export default function PersistentDrawerLeft() {
                 </ListItemButton>
               </List>
             </Collapse>
-          </List>
-          <List>
-            <Box sx={{ textAlign: "center" }}>
-              <Button variant="outlined" color="error">
-                Logout
-              </Button>
-            </Box>
           </List>
           <List>
             <Box sx={{ textAlign: "center" }}>
@@ -374,6 +414,13 @@ export default function PersistentDrawerLeft() {
                 }}
               >
                 Logistical Charts
+              </Button>
+            </Box>
+          </List>
+          <List>
+            <Box sx={{ textAlign: "center" }}>
+              <Button variant="outlined" color="error">
+                Logout
               </Button>
             </Box>
           </List>
@@ -403,7 +450,6 @@ export default function PersistentDrawerLeft() {
             <Route path="/accessories-kids" element={<AccessoriesKids />} />
             {/* Charts  */}
             <Route path="/charts" element={<Chart />} />
-            
           </Routes>
         </Main>
       </Box>
