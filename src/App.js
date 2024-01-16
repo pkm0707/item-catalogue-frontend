@@ -29,7 +29,6 @@ import { IoShirtSharp } from "react-icons/io5";
 import { GiShirt } from "react-icons/gi";
 import { PiPantsBold } from "react-icons/pi";
 import { PiPantsFill } from "react-icons/pi";
-import { GiUnderwearShorts } from "react-icons/gi";
 import { GiUnderwear } from "react-icons/gi";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -48,7 +47,6 @@ import { Company } from "./pages/About/Company";
 import { Carrers } from "./pages/About/Carrers";
 import { Shirts } from "./pages/MensFashioin/Shirts";
 import { Pants } from "./pages/MensFashioin/Pants";
-import { Trousers } from "./pages/MensFashioin/Trousers";
 import { Innerwears } from "./pages/MensFashioin/Innerwears";
 import { AccessoriesMen } from "./pages/MensFashioin/AccessoriesMen";
 import { Bottoms } from "./pages/WomensFashion/Bottoms";
@@ -286,15 +284,6 @@ export default function PersistentDrawerLeft() {
                 </ListItemButton>
                 <ListItemButton
                   sx={{ pl: 4 }}
-                  onClick={() => navigate("/trousers")}
-                >
-                  <ListItemIcon>
-                    <GiUnderwearShorts size={20} color="green" />
-                  </ListItemIcon>
-                  <ListItemText primary="Trousers" />
-                </ListItemButton>
-                <ListItemButton
-                  sx={{ pl: 4 }}
                   onClick={() => navigate("/innerwears")}
                 >
                   <ListItemIcon>
@@ -437,7 +426,6 @@ export default function PersistentDrawerLeft() {
             {/* Men's Fashion */}
             <Route path="/shirts" element={<Shirts />} />
             <Route path="/pants" element={<Pants />} />
-            <Route path="/trousers" element={<Trousers />} />
             <Route path="/innerwears" element={<Innerwears />} />
             <Route path="/accessories-men" element={<AccessoriesMen />} />
             {/* Women's Fashion */}
