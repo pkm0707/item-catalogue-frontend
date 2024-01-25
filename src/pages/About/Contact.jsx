@@ -7,8 +7,10 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export function Contact() {
+  const navigate = useNavigate()
   return (
     <div style={{ padding: "50px" }}>
       <Grid>
@@ -97,7 +99,8 @@ export function Contact() {
             </form>
           </CardContent>
         </Card>
-      </Grid>
+      </Grid><br/>
+      <Button variant="contained" onClick={()=>navigate(-1)}>Back</Button>
     </div>
   );
 }

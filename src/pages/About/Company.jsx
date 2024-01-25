@@ -1,5 +1,8 @@
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 export function Company() {
+  const navigate = useNavigate()
   return (
     <div>
       <Typography
@@ -37,7 +40,8 @@ export function Company() {
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
-      ></iframe>
+      ></iframe><br/>
+      <Button variant="contained" onClick={()=>navigate(-1)}>Back</Button>
     </div>
   );
 }

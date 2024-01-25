@@ -4,26 +4,28 @@ import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
+import { SearchBar } from "./SearchBar/SearchBar";
+
 export function Home() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const images = [
     {
       url: "https://media.istockphoto.com/id/864505242/photo/mens-clothing-and-personal-accessories.jpg?s=612x612&w=0&k=20&c=TaJuW3UY9IZMijRrj1IdJRwd6iWzXBlrZyQd1uyBzEY=",
       title: "Men's Fashion",
       width: "40%",
-      navigate:"/shirts"
+      navigate: "/shirts",
     },
     {
       url: "https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/2021/12/Womens-Clothing.jpg",
       title: "Women's Fashion",
       width: "30%",
-      navigate:"/tops"
+      navigate: "/tops",
     },
     {
       url: "https://i.pinimg.com/736x/1d/b7/cb/1db7cb8220b65aec5758fdd55ce6b2bf.jpg",
       title: "Kid's Fashion",
       width: "30%",
-      navigate:"/shirts-kids"
+      navigate: "/shirts-kids",
     },
   ];
 
@@ -91,8 +93,25 @@ export function Home() {
     transition: theme.transitions.create("opacity"),
   }));
 
+  const items = [
+    { title: "All items", navigate: "/all-tems" },
+    { title: "All items-M", navigate: "/all-items-men" },
+    { title: "All items-W", navigate: "/all-items-women" },
+    { title: "All items-K", navigate: "/all-items-kids" },
+    { title: "Shirts-M", navigate: "/shirts" },
+    { title: "Pants-M", navigate: "/pants" },
+    { title: "Accessories-M", navigate: "/accessories-men" },
+    { title: "Tops-W", navigate: "/tops" },
+    { title: "Bottoms-W", navigate: "/bottoms" },
+    { title: "Acccesories-W", navigate: "/accessories-women" },
+    { title: "Shirts-K", navigate: "/shirts-kids" },
+    { title: "Pants-K", navigate: "/pants-kids" },
+    { title: "Accessories-K", navigate: "/accessories-kids" },
+  ];
+
   return (
     <div>
+      <SearchBar placeholder="Search" data={items} />
       <Box
         sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "100%" }}
       >
@@ -117,7 +136,7 @@ export function Home() {
                   pt: 2,
                   pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
                 }}
-                onClick={()=>navigate(image.navigate)}
+                onClick={() => navigate(image.navigate)}
               >
                 {image.title}
                 <ImageMarked className="MuiImageMarked-root" />
