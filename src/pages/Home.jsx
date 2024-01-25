@@ -94,10 +94,10 @@ export function Home() {
   }));
 
   const items = [
-    { title: "All items", navigate: "/all-tems" },
-    { title: "All items-M", navigate: "/all-items-men" },
-    { title: "All items-W", navigate: "/all-items-women" },
-    { title: "All items-K", navigate: "/all-items-kids" },
+    { title: "All Products", navigate: "/all-items" },
+    { title: "All Products-M", navigate: "/all-items-mens" },
+    { title: "All Products-W", navigate: "/all-items-womens" },
+    { title: "All Products-K", navigate: "/all-items-kids" },
     { title: "Shirts-M", navigate: "/shirts" },
     { title: "Pants-M", navigate: "/pants" },
     { title: "Accessories-M", navigate: "/accessories-men" },

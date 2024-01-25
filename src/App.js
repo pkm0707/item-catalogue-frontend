@@ -29,6 +29,7 @@ import { IoShirtSharp } from "react-icons/io5";
 import { GiShirt } from "react-icons/gi";
 import { PiPantsBold } from "react-icons/pi";
 import { PiPantsFill } from "react-icons/pi";
+import { GiClothes } from "react-icons/gi";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { MdContactPage } from "react-icons/md";
@@ -53,6 +54,10 @@ import { AccessoriesWomen } from "./pages/WomensFashion/AccessoriesWomen";
 import { AccessoriesKids } from "./pages/KidsFashion/AccessoriesKids";
 import { PantsKids } from "./pages/KidsFashion/PantsKids";
 import { ShirtsKids } from "./pages/KidsFashion/ShirtsKids";
+import { Allitems } from "./pages/About/Allitems";
+import { Allmensitems } from "./pages/MensFashioin/Allmensitems";
+import { Allwomensitems } from "./pages/WomensFashion/Allwomensitems";
+import { Allkidsitems } from "./pages/KidsFashion/AllKidsitems";
 
 const drawerWidth = 240;
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -225,6 +230,17 @@ export default function PersistentDrawerLeft() {
                 <ListItemButton
                   sx={{ pl: 4 }}
                   onClick={() => {
+                    navigate("/all-items");
+                  }}
+                >
+                  <ListItemIcon>
+                    <GiClothes size={20} color="#BDB76B" />
+                  </ListItemIcon>
+                  <ListItemText primary="Our Products" />
+                </ListItemButton>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => {
                     navigate("/carrers");
                   }}
                 >
@@ -262,6 +278,17 @@ export default function PersistentDrawerLeft() {
             </ListItemButton>
             <Collapse in={menclick} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => {
+                    navigate("/all-items-mens");
+                  }}
+                >
+                  <ListItemIcon>
+                    <GiClothes size={20} color="#DC143C" />
+                  </ListItemIcon>
+                  <ListItemText primary="All Products" />
+                </ListItemButton>
                 <ListItemButton
                   sx={{ pl: 4 }}
                   onClick={() => navigate("/shirts")}
@@ -309,6 +336,17 @@ export default function PersistentDrawerLeft() {
               <List component="div" disablePadding>
                 <ListItemButton
                   sx={{ pl: 4 }}
+                  onClick={() => {
+                    navigate("/all-items-womens");
+                  }}
+                >
+                  <ListItemIcon>
+                    <GiClothes size={20} color="#00FF7F" />
+                  </ListItemIcon>
+                  <ListItemText primary="All Products" />
+                </ListItemButton>
+                <ListItemButton
+                  sx={{ pl: 4 }}
                   onClick={() => navigate("/tops")}
                 >
                   <ListItemIcon>
@@ -352,6 +390,17 @@ export default function PersistentDrawerLeft() {
             </ListItemButton>
             <Collapse in={kidsclick} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  onClick={() => {
+                    navigate("/all-items-kids");
+                  }}
+                >
+                  <ListItemIcon>
+                    <GiClothes size={20} color="#8FBC8B" />
+                  </ListItemIcon>
+                  <ListItemText primary="All Products" />
+                </ListItemButton>
                 <ListItemButton
                   sx={{ pl: 4 }}
                   onClick={() => navigate("/shirts-kids")}
@@ -410,17 +459,21 @@ export default function PersistentDrawerLeft() {
             <Route path="/" element={<Home />} />
             {/* About  */}
             <Route path="/contact" element={<Contact />} />
+            <Route path="/all-items" element={<Allitems />} />
             <Route path="/company" element={<Company />} />
             <Route path="/carrers" element={<Carrers />} />
             {/* Men's Fashion */}
+            <Route path="/all-items-mens" element={<Allmensitems />} />
             <Route path="/shirts" element={<Shirts />} />
             <Route path="/pants" element={<Pants />} />
             <Route path="/accessories-men" element={<AccessoriesMen />} />
             {/* Women's Fashion */}
+            <Route path="/all-items-womens" element={<Allwomensitems />} />
             <Route path="/tops" element={<Tops />} />
             <Route path="/bottoms" element={<Bottoms />} />
             <Route path="/accessories-women" element={<AccessoriesWomen />} />
             {/* Kid's Fashion */}
+            <Route path="/all-items-kids" element={<Allkidsitems />} />
             <Route path="/shirts-kids" element={<ShirtsKids />} />
             <Route path="/pants-kids" element={<PantsKids />} />
             <Route path="/accessories-kids" element={<AccessoriesKids />} />
