@@ -41,7 +41,7 @@ import { Button } from "@mui/material";
 import { Home } from "./pages/Home";
 import { useNavigate } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-import { Chart } from "./pages/Chart";
+import { Chart } from "./pages/Chart/Chart";
 import { Contact } from "./pages/About/Contact";
 import { Company } from "./pages/About/Company";
 import { Carrers } from "./pages/About/Carrers";
